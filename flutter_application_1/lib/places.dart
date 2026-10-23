@@ -86,6 +86,15 @@ class Places {
     mokond,
   ];
 
+   static const List<Landmark> shuttlerout = [
+    shahidMinar,
+    lalbaghFort,
+    ahsanManzil,
+    hatirjheel,
+    parliament,
+    zindabazar,
+  ];
+
   /// First camera frame. Later moves go through GoogleMapController.
   static const CameraPosition openingCamera = CameraPosition(
     target: LatLng(23.740, 90.400),

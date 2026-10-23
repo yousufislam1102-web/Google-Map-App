@@ -8,6 +8,7 @@ import 'package:flutter_application_1/part1_info_geastures/gps_screen.dart';
 import 'package:flutter_application_1/part1_info_geastures/info_windows_screen.dart';
 import 'package:flutter_application_1/part1_info_geastures/map_geasture_screen.dart';
 import 'package:flutter_application_1/part2_persmission_relatime/permission_screen.dart';
+import 'package:flutter_application_1/part3_maps_markers_polylines/polylines_screen.dart';
 
 
 
@@ -27,6 +28,8 @@ class HomeScreen extends StatelessWidget {
           _DemoButton(label: 'GPS', screen: GpsScreen()),
           _SectionTitle('Part 2 — Permissions, Realtime'),
           _DemoButton(label: 'Permissions', screen: PermissionScreen()),
+          _SectionTitle('Google Maps'),
+          _DemoButton(label: 'Polylines', screen: PolylinesScreen()),
         ],
       ),
     );
