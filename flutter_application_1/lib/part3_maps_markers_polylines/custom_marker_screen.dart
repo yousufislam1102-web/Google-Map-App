@@ -13,11 +13,23 @@ class CustomMarkerScreen extends StatefulWidget {
 
 class _CustomMarkerScreenState extends State<CustomMarkerScreen> {
   BitmapDescriptor? _campuspin;
+  BitmapDescriptor? _zindabazarpin;
 
   @override
   void initState() {
     super.initState();
     _loadCampusPin();
+    _loadZindabazarPin();
+  }
+
+  Future<void> _loadZindabazarPin() async {
+    final zindabazarpin = await BitmapDescriptor.asset(
+      const ImageConfiguration(size: Size(48, 48)),
+      'assets/images/zindabazar_pin.png',
+    );
+    setState(() {
+      _zindabazarpin = zindabazarpin;
+    });
   }
 
   Future<void> _loadCampusPin() async {
@@ -63,6 +75,17 @@ class _CustomMarkerScreenState extends State<CustomMarkerScreen> {
       _huepin(
         Places.hatirjheel,
         BitmapDescriptor.hueOrange,
+      ),
+      Marker(
+        markerId: MarkerId(Places.zindabazar.id),
+        position: Places.zindabazar.position,
+        infoWindow: InfoWindow(
+          title: Places.zindabazar.name,
+          snippet: _zindabazarpin == null
+              ? 'Loading custom marker...'
+              : 'Custom zindabazar marker',
+        ),
+        icon: _zindabazarpin ?? BitmapDescriptor.defaultMarker,
       ),
       Marker(
         markerId: MarkerId(Places.university.id),

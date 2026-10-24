@@ -29,7 +29,7 @@ class Places {
   static const Landmark mokond = Landmark(
     id: 'Mokon',
     name: 'Mokon Dukan',
-    position: LatLng(24.886436, 91.880722),
+    position: LatLng(24.885060, 91.842072),
     fact: 'Heart of Sylhet',
   );
 
@@ -86,7 +86,7 @@ class Places {
     mokond,
   ];
 
-   static const List<Landmark> shuttlerout = [
+  static const List<Landmark> shuttlerout = [
     shahidMinar,
     lalbaghFort,
     ahsanManzil,
