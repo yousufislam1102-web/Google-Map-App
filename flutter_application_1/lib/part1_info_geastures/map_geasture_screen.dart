@@ -35,7 +35,7 @@ class _MapGesturesScreenState extends State<MapGesturesScreen> {
     _camera.dispose();
   }
 
-  void _goToHatirjheel() {
+  void _goToZindabazar() {
     _map?.animateCamera(
       CameraUpdate.newCameraPosition(
         CameraPosition(
@@ -145,7 +145,7 @@ class _MapGesturesScreenState extends State<MapGesturesScreen> {
             spacing: 8,
             children: [
               OutlinedButton(
-                onPressed: _goToHatirjheel,
+                onPressed: _goToZindabazar,
                 child: const Text('Go to Zindabazar'),
               ),
               OutlinedButton(
